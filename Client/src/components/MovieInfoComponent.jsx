@@ -10,7 +10,7 @@ const Container = styled.div`
   flex-direction: row;
   padding: 20px 30px;
   justify-content: center;
-  border: 1px solid lightgray;
+  border: 2px solid lightgray;
 `;
 const CoverImage = styled.img`
   object-fit: cover;
@@ -61,6 +61,7 @@ const MovieInfoComponent = () => {
 
   }, []);
   return (
+    <div className="flex h-screen justify-center items-center">
     <Container>
       {movieInfo ? (
         <>
@@ -105,6 +106,7 @@ const MovieInfoComponent = () => {
         "Loading..."
       )}
     </Container>
+    </div>
   );
 };
 export default MovieInfoComponent;
