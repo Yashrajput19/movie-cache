@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import MovieComponent from './MovieComponent'
 import axios from 'axios';
+import CreatePlaylist from './CreatePlaylist';
 const API_KEY = "3451fe25"
 
 
@@ -27,8 +28,8 @@ const Home = () => {
     <>
       <div className='flex justify-center gap-2 text-white p-5'>
           <input value={searchQuery} placeholder='Search for movies' onChange={textChangeHandler}
-           className='bg-black text-white w-96 rounded border-2 h-10 p-5' />
-        <button className='bg-sky-500 p-2 rounded'>Create Playlist</button>
+           className='bg-black text-white w-96 rounded border-2 h-10 p-4' />
+        <CreatePlaylist/>
         <button className='bg-red-600 p-2 rounded' >Log Out</button>
       </div>
 
